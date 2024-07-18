@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>GREG'S CSS MINI-PROJECT</title>
+  </head>
+  <body>
+    <header class="column linear-gradient-background">
+      <h1>Greg's CSS Snippet Cheatsheet</h1>
+      <p>
+        Click inside of the code block of any snippet below to select the whole
+        snippet so you can copy it.
+      </p>
+    </header>
+
+    <main class="grid">
+      <div class="code-card">
+        <p class="card-header">FLEXBOX ROW</p>
+        <p>Use these properties to create a FLEXBOX ROW layout.</p>
+        <pre class="linear-gradient-background">
+            <code class="select-all">
+.row { 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+            </code>
+        </pre>
+      </div>
+
+      <div class="code-card">
+        <p class="card-header">FLEXBOX COLUMN</p>
+        <p>Use these properties to create a FLEXBOX COLUMN layout.</p>
+        <pre class="linear-gradient-background">
+            <code class="select-all">
+.column {
+    display: flex;
+    flex-direction: column;
+}
+            </code>
+         </pre>
+      </div>
+
+      <div class="code-card">
+        <p class="card-header">CSS GRID</p>
+        <p>Build a 12 column grid with CSS.</p>
+        <pre class="linear-gradient-background">
+            <code class="select-all">
+.grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+}
+            </code>
+        </pre>
+      </div>
+
+      <div class="code-card">
+        <p class="card-header">LINEAR GRADIENTS</p>
+        <p>Create a linear background gradient from top to bottom.</p>
+        <pre class="linear-gradient-background">
+            <code class="select-all">
+.linear-gradient-background {
+    background-image: linear-gradient { 
+        rgba(232, 162, 236, 0.3) 0%,
+        rgba(162, 236, 232, 0.6) 100%
+    };
+}
+            </code>
+        </pre>
+      </div>
+
+      <div class="code-card">
+        <p class="card-header">BOX TRANSITION GLOW</p>
+        <p>Use transition and box shadows to glow on hover.</p>
+        <pre class="linear-gradient-background">
+            <code class="select-all">
+.code-card .card-header {
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.code-card:hover,
+.code-card:hover .card-header:hover {
+    box-shadow: inset 0 0 8px rgba(232, 102, 232, 1), 
+                0 0 15px rgba(232, 102, 232, 1);
+}
+            </code>   
+        </pre>
+      </div>
+
+      <div class="code-card">
+        <p class="card-header">OVERLAY CARD TITLE</p>
+        <p>Use these properties to create a displaced card title.</p>
+        <pre class="linear-gradient-background">
+           <code class="select-all">
+.card-header {
+    position: relative;
+    margin-top: -20px;
+}
+            </code>
+         </pre>
+      </div>
+    </main>
+    <footer class="linear-gradient-background">
+      <p>&copy;💡 2024 Greg's CSS Snippet Cheatsheet - MADE WITH CSS! 🏆</p>
+    </footer>
+  </body>
+</html>
