@@ -1,6 +1,6 @@
 * {
   --primary-color: #f0f0f0;
-  --secondary-color: #999999;
+  --secondary-color: rgba(100, 100, 100, 0.3);
   --tertiary-color: #ff8b21;
   --background-color: #000000;
   --background-color-2: rgba(255, 139, 33, 0.3);
@@ -15,6 +15,9 @@ html {
   color: var(--primary-color);
   font-family: "Roboto", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+}
+body {
+  margin: 0 2rem 0 2rem;
 }
 
 header {
@@ -78,8 +81,13 @@ header p {
   gap: 1rem;
   background-color: var(--secondary-color);
   border-style: var(--border-style);
-  margin: 5px;
-  padding: 5px;
+  margin: 10px;
+  padding: 10px;
+  glassmorphism: 1;
+
+  min-width: 0; /* This is crucial for grid items */
+  box-sizing: border-box;
+  word-wrap: break-word; /* Allows long words to break and wrap */
 }
 
 .code-card .card-header {
@@ -113,7 +121,7 @@ pre {
 }
 
 code {
-  font-size: 0.5rem;
+  font-size: 0.6rem;
 }
 
 code.select-all {
@@ -121,6 +129,9 @@ code.select-all {
   -webkit-user-select: all;
   -moz-user-select: all;
   -ms-user-select: all;
+  -o-user-select: all;
+  cursor: pointer;
+  padding: 5px;
 }
 
 pre code.no-indent {
@@ -138,4 +149,39 @@ footer {
   height: 3rem;
   margin: 20px 3rem 20px 3rem;
   border-radius: var(--border-radius);
+}
+
+@media screen and (max-width: 960px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .code-card {
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+  footer {
+    height: 3rem;
+    margin: 20px 2rem 20px 2rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .code-card {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    margin: 0;
+  }
+  footer {
+    height: 3rem;
+    margin: 20px 1rem 20px 1rem;
+    text-align: center;
+  }
 }
